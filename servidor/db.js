@@ -5,7 +5,7 @@
 import mongoose from 'mongoose';
 
 // Cadena de conexión a MongoDB local
-const URI_MONGODB = 'mongodb://localhost:27017/playamar_boutique';
+const URI_MONGODB = 'mongodb+srv://gerarditolagunesflores_db_user:123@callejabd.u4evc8f.mongodb.net/';
 
 /**
  * Conecta a la base de datos MongoDB

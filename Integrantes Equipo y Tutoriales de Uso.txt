@@ -1,0 +1,80 @@
+MATERIA: 
+Gestión de Proyectos de Software
+
+DOCENTE: 
+Jesús Cruzado Calleja
+
+INTEGRANTES:
+Gerardo Lagunes Flores
+Cristian Emmanuel Flores Hernández 
+
+=== TUTORIAL: CÓMO USAR MONGODB ===
+https://www.youtube.com/watch?v=KQdIobNHp70
+
+=== TUTORIAL: CÓMO EJECUTAR PLAYAMAR BOUTIQUE ===
+
+--- PASO 1: INSTALAR LOS PROGRAMAS NECESARIOS ---
+Necesitas instalar estos 2 programas:
+1. Node.js (versión 18 o superior)
+- Ve a https://nodejs.org
+- Descarga la versión LTS
+- Ejecuta el instalador y sigue los pasos (siguiente, siguiente, siguiente)
+
+2. MongoDB Community (la base de datos)
+- Ve a https://www.mongodb.com/try/download/community
+- Descarga e instala
+- Durante la instalacion, marca "Install MongoDB as a Service"
+
+--- PASO 2: ABRIR UNA TERMINAL ---
+Windows: Presiona la tecla Windows, escribe "PowerShell" y abre Windows PowerShell
+Mac: Presiona cmd + espacio, escribe "Terminal" y abre la Terminal
+
+--- PASO 3: IR A LA CARPETA DEL PROYECTO ---
+Escribe este comando (cambia la ruta si la carpeta esta en otro lado):
+
+cd "Ruta donde se encuentra el archivo"
+
+Presiona Enter.
+
+--- PASO 4: INSTALAR LAS DEPENDENCIAS ---
+Escribe este comando y presiona Enter:
+npm install
+
+Espera a que termine. Puede tardar unos minutos.
+
+--- PASO 5: SEMBRAR DATOS DE PRUEBA (OPCIONAL) ---
+Si quieres que la base de datos tenga datos de ejemplo, escribe:
+
+npm run seed
+
+--- PASO 6: INICIAR EL PROGRAMA ---
+Escribe este comando y presiona Enter:
+
+npm run dev
+
+Veras dos mensajes como estos:
+- "Servidor corriendo en http://localhost:5000"
+
+- "Local: http://localhost:5173/"
+
+--- PASO 7: ABRIR EN EL NAVEGADOR ---
+Abre Google Chrome, Edge o Firefox.
+En la barra de direcciones escribe:
+http://localhost:5173
+
+Presiona Enter. La pagina deberia cargar.
+
+--- PARA DETENER EL PROGRAMA ---
+En la terminal, presiona Ctrl + C (las dos teclas al mismo tiempo).
+
+--- POSIBLES ERRORES ---
+"Error al conectar con MongoDB"
+-> Solucion: MongoDB no esta corriendo. Abre "Services" en Windows, busca
+
+   "MongoDB Server" y haz clic en "Start".
+
+"'npm' no se reconoce"
+-> Solucion: No instalaste Node.js correctamente. Vuelve al paso 1.
+
+"El puerto ya esta en uso"
+-> Solucion: Cierra otros programas o reinicia la computadora.
