@@ -54,7 +54,7 @@ aplicacion.use('/api/calificaciones', rutasCalificaciones);
 aplicacion.use(express.static(path.join(__dirname, '../dist')));
 
 // Cualquier ruta que no sea API, responder con index.html
-aplicacion.get('(.*)', (peticion, respuesta) => {
+aplicacion.use((peticion, respuesta) => {
   respuesta.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 
