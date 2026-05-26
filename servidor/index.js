@@ -5,7 +5,12 @@
 
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { conectarBD } from './db.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 import { verificarToken } from './middleware/auth.js';
 
 // Importar las rutas de cada recurso
@@ -44,6 +49,14 @@ aplicacion.use('/api/transacciones', rutasTransacciones);
 aplicacion.use('/api/proveedores', rutasProveedores);
 aplicacion.use('/api/compras', rutasCompras);
 aplicacion.use('/api/calificaciones', rutasCalificaciones);
+
+// Servir archivos estáticos del frontend compilado por Vite
+aplicacion.use(express.static(path.join(__dirname, '../dist')));
+
+// Cualquier ruta que no sea API, responder con index.html
+aplicacion.get('*', (peticion, respuesta) => {
+  respuesta.sendFile(path.join(__dirname, '../dist', 'index.html'));
+});
 
 // Iniciar el servidor
 async function iniciar() {

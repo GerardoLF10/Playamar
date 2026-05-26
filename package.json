@@ -8,6 +8,7 @@
     "dev:frontend": "vite",
     "dev:backend": "node servidor/index.js",
     "build": "vite build",
+    "start": "node servidor/index.js",
     "server": "node servidor/index.js",
     "seed": "node servidor/sembrar.js"
   },
