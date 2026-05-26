@@ -19,7 +19,7 @@ import CalificacionServicio from './modelos/CalificacionServicio.js';
 async function sembrar() {
   try {
     // Conectar a MongoDB
-    await mongoose.connect('mongodb://localhost:27017/playamar_boutique');
+    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/playamar_boutique');
     console.log('✅ Conectado a MongoDB');
 
     // Limpiar datos existentes para evitar duplicados
