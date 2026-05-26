@@ -5,7 +5,7 @@
 import mongoose from 'mongoose';
 
 // Cadena de conexión a MongoDB local
-const URI_MONGODB = 'mongodb+srv://gerarditolagunesflores_db_user:123@callejabd.u4evc8f.mongodb.net/';
+const URI_MONGODB = process.env.MONGODB_URI || 'mongodb+srv://gerarditolagunesflores_db_user:123@callejabd.u4evc8f.mongodb.net/';
 
 /**
  * Conecta a la base de datos MongoDB
